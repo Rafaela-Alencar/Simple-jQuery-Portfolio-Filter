@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap css Grid</title>
+    <link rel="stylesheet" href="style.css">
+    <script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+        $(".button").click(function(){
+            var value = $(this).attr("data-filter");
+            if (value == "all")
+            {
+                $(".box-filter").show("1000");
+            }
+            else{
+                $(".box-filter").not("."+value).hide("1000");
+                $(".box-filter").filter("."+value).show("1000");
+            }
+            //add active class
+            $("ul .button").click(function(){
+                $(this).addClass('active').siblings().removeClass('active');
+            })
+        })
+    })
+</script>
+    
+</head>
+
+<body>
+    <div class="container">
+        <ul>
+            <li class="button active" data-filter="all">All</li>
+            <li class="button" data-filter="website">Website</li>
+            <li class="button" data-filter="graphics">Graphics</li>
+            <li class="button" data-filter="psd">PSD</li>
+            <li class="button" data-filter="logo">Logo</li>
+            <li class="button" data-filter="application">Application</li>
+            <div style="clear:both;"></div>
+        </ul>
+        <div class="box-filter website">Website</div>
+        <div class="box-filter graphics">Graphics</div>
+        <div class="box-filter psd">PSD</div>
+        <div class="box-filter logo">Logo</div>
+        <div class="box-filter application">Application</div>
+        <div class="box-filter website">Website</div>
+        <div class="box-filter graphics">Graphics</div>
+        <div class="box-filter psd">PSD</div>
+        <div class="box-filter logo">Logo</div>
+        <div class="box-filter application">Application</div>
+        <div class="box-filter website">Website</div>
+        <div class="box-filter graphics">Graphics</div>
+        <div class="box-filter psd">PSD</div>
+        <div class="box-filter logo">Logo</div>
+        <div class="box-filter application">Application</div>
+        <div class="box-filter psd">PSD</div>
+
+    </div>
+
+
+
+   
+</body>
+</html>
